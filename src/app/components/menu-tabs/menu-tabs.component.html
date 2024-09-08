@@ -1,0 +1,11 @@
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button *ngFor="let elemento of menuListado;" [href]="elemento.path">
+          <ion-icon name="{{elemento.icon}}" /> {{elemento.name}}
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

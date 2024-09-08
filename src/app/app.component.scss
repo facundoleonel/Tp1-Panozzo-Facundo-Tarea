@@ -1,0 +1,16 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+ion-content {
+    flex: 1;
+    z-index: 99;
+}
+
+ion-footer {
+    position: static;
+}

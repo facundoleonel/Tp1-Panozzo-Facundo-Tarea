@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-content">
+    <form [formGroup]="formulario" (ngSubmit)="guardarFormulario()">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" class="profile-header">
+            <figure>
+              <ion-img src="./../../../assets/img/avatar.png" alt="imagen"></ion-img> <br>
+              <ion-button size="small" fill="outline" (click)="cambiarFoto()">Editar foto o avatar</ion-button>
+            </figure>
+          </ion-col>
+          <ion-col size="10">
+            <ion-input formControlName="name" label="Nombre completo" labelPlacement="floating" fill="outline"></ion-input>
+            <br>
+            <ion-input formControlName="email" label="Correo electronico" labelPlacement="floating" fill="outline"></ion-input>
+            <br>
+            <ion-textarea [autoGrow]="true" formControlName="description" label="Biografia" labelPlacement="floating" fill="outline"></ion-textarea>
+            <br>
+            <ion-button size="small" fill="outline" type="submit">Guardar perfil</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>
+
+<!-- Bienvenido! Facundo Panozzo -->
+
+<app-menu-tabs [estaLoggeado]="true"></app-menu-tabs>
